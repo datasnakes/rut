@@ -11,6 +11,7 @@ keywords = ['r', 'package-management', 'utilities']
 [tool.poetry.dependencies]
 python = "3.6"
 click = "^7.0"
+rpy2 = "^2.9"
 
 [tool.poetry.dev-dependencies]
 
