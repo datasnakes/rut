@@ -1,2 +1,7 @@
 # rut
-A CLI to help manage packrat projects, miniCRAN repositories, and .Renviron/.Rprofile configuration files.
+
+A cli of r utilities aimed at package and .Rprofile management.
+
+## Installation
+
+
