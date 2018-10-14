@@ -1,5 +1,6 @@
 from rut.utils import run_r_command, to_vector
 from rut.core import install_remotes
+
 import click
 
 
@@ -23,5 +24,5 @@ def cran(packages, repos):
     cmd = ["remotes::install_cran(", vector, ", repos='", repos, "')"]
     cmd = "".join(cmd)
     click.echo(f"Running in R: {cmd}")
-    install.remotes()
+    install_remotes()
     run_r_command(cmd)
