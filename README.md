@@ -20,28 +20,33 @@ $ pip install dist/rut-0.1.0-py3-none-any.whl
 
 ## Usage
 
-### Using the jetpack cli
+The current implementation of `rut` uses R's [remotes](https://github.com/r-lib/remotes) package to install packages.
 
-```console
-$ rut jetpack --help
-Usage: rut jetpack [OPTIONS] COMMAND [ARGS]...
+Soon, [jetpack](https://github.com/datasnakes/jetpack) will be integrated to allow for better global management of user packages and in the future,
+local/project package management.
 
-Options:
-  --help  Show this message and exit.
-
-Commands:
-  add            Add global packages using jetpack.
-  install        Install jetpack.
-  list-packages  List global R packages with jetpack.
-  remove         Remove global packages using jetpack.
-
-```
-
-## Using R's remotes package
+### Using R's remotes package
 
 ```console
 $ rut install cran ggpubr
 Running in R: remotes::install_cran(c('ggpubr'), repos='http://cloud.r-project.org/')
+```
+
+For help with `rut install cran`, type `rut install cran --help`.
+
+```console
+$ rut install cran --help
+Usage: rut install cran [OPTIONS] [PACKAGES]...
+
+  Install packages from CRAN.
+
+  Specify versions using the following format: pkgA=1.4 pkgB=2.1
+
+Options:
+  -r, --repos TEXT    CRAN repository
+  -f, --force TEXT    Force install package
+  -u, --upgrade TEXT  Upgrade out-of-date packages
+  --help              Show this message and exit.
 ```
 
 ## Maintainers
