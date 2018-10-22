@@ -27,6 +27,9 @@ local/project package management.
 
 ### Using R's remotes package
 
+`rut install cran` allows installation using the default/global CRAN repository.
+Additionally, the user may pass a different repository to `-r`.
+
 ```console
 $ rut install cran ggpubr
 Running in R: remotes::install_cran(c('ggpubr'), repos='http://cloud.r-project.org/')
